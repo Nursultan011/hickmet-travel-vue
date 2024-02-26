@@ -1,0 +1,26 @@
+.icon{
+  width: $rem-1875;
+  height: $rem-1875;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.white--text{
+  color: $white-color;
+}
+
+.black--text{
+  color: $black-color;
+}
+
+.grey--text{
+  color: $grey-color;
+}
+
+.brand--text{
+  color: $brand-color;
+}
+
+.text--center{
+  text-align: center;
+}

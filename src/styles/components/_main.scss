@@ -1,0 +1,105 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $rem-0375 $rem-1000;
+  .language, .setting, .logo{
+    display: flex;
+    align-items: center
+  }
+  .logo{
+    img{
+      max-width: $rem-5500;
+      width: 100%;
+      height: 100%;
+      max-height: $rem-1375;
+      object-fit: contain;
+      object-position: center center;
+    }
+  }
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &__search{
+    margin-top: $rem-1500;
+    width: 100%;
+    background-image: url('@/assets/images/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    padding: $rem-3750 $rem-1000 $rem-3500;
+    h1{
+      font-size: $rem-2125;
+      font-weight: 700;
+      line-height: $rem-2125;
+      margin-bottom: $rem-750;
+    }
+    p{
+      font-weight: 400;
+      font-size: $rem-10625;
+      line-height: $rem-1250;
+      margin-bottom: $rem-1500;
+    }
+  }
+  &__lists{
+    padding: $rem-2500 $rem-1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $rem-1500;
+    h2{
+      font-size: $rem-1250;
+      line-height: $rem-1500;
+      font-weight: 600;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    ul{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style-type: none;
+      li{
+        width: calc(50% - $rem-250);
+        border: 1px solid #F3F3F3;
+        padding: $rem-750 $rem-1000; 
+        display: flex;
+        align-items: center;
+        margin-bottom: $rem-500;
+        overflow: hidden;
+        img{
+          width: $rem-1500;
+          height: $rem-1500;
+          min-width: $rem-1500;
+          min-height: $rem-1500;
+          max-width: $rem-1500;
+          max-height: $rem-1500;
+          object-fit: contain;
+          object-position: center center;
+          margin-right: $rem-625;
+        }
+        div{
+          gap: $rem-125;
+          display: flex;
+          flex-direction: column;
+        }
+        p{
+          font-size: $rem-875;
+          line-height: $rem-10625;
+          font-weight: 400;
+        }
+        span{
+          font-size: $rem-750;
+          line-height: $rem-875;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
