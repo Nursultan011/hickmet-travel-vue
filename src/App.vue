@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <main class="main">
+    <loader v-if="isLoading" />
+    <main v-else class="main">
       <header class="header">
           <div class="language">
             <img class="icon" src="./assets/images/lang-icon.png" alt="">
@@ -46,15 +47,26 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { main_lists } from './content/index.js'
+import Loader from './components/Loader.vue'
 
 export default {
   name: 'App',
   components: {
+    Loader
   },
   setup(){
+    const isLoading = ref(true);
+
+    onMounted(() => {
+      setTimeout(() => {
+        isLoading.value = false;
+      }, 1000)
+    })
+
     return{
+      isLoading,
       main_lists
     }
   }
