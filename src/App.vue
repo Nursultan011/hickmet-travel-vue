@@ -20,6 +20,10 @@
           <p class="white--text text--center">
             Мы помогаем осуществить главную поездку в Вашей жизни с максимальным комфортом.
           </p>
+          <form action="">
+           <InputCity />
+
+          </form>
       </div>
       <div class="main__lists">
           <h2 class="black--text text--center">
@@ -50,11 +54,13 @@
 import { onMounted, ref } from 'vue'
 import { main_lists } from './content/index.js'
 import Loader from './components/Loader.vue'
+import InputCity from './components/common/InputCity'
 
 export default {
   name: 'App',
   components: {
-    Loader
+    Loader,
+    InputCity
   },
   setup(){
     const isLoading = ref(true);

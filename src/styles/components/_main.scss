@@ -44,6 +44,32 @@
       line-height: $rem-1250;
       margin-bottom: $rem-1500;
     }
+    // form{
+    //   input{
+    //     border-radius: $rem-750;
+    //     width: 100%;
+    //     height: $rem-3875;
+    //     font-size: $rem-10625;
+    //     padding: 12px 16px 0;
+    //   }
+    //   .input{
+    //     position: relative;
+    //     span{
+    //       position: absolute;
+    //       color: $grey-color;
+    //       &.input-city-en{
+    //         right: $rem-1000;
+    //         top: 21px;
+    //         font-size: $rem-10625;
+    //       }
+    //       &.input-city-label{
+    //         font-size: $rem-750;
+    //         top: $rem-750;
+    //         left: $rem-1000;
+    //       }
+    //     }
+    //   }
+    // }
   }
   &__lists{
     padding: $rem-2500 $rem-1000;
