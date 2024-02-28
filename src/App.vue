@@ -22,7 +22,7 @@
           </p>
           <form action="">
            <InputCity />
-
+           <InputDatePassanger />
           </form>
       </div>
       <div class="main__lists">
@@ -48,6 +48,12 @@
       </div>
     </main>
   </div>
+  <Transition name="tray">
+    <ModalVue v-if="store.state.step == 2">
+      <InputCity />
+    </ModalVue>
+  </Transition>
+    <Tour v-if="store.state.step == 3" />
 </template>
 
 <script>
@@ -55,15 +61,23 @@ import { onMounted, ref } from 'vue'
 import { main_lists } from './content/index.js'
 import Loader from './components/Loader.vue'
 import InputCity from './components/common/InputCity'
+import ModalVue from './components/Modal.vue'
+import { useStore } from 'vuex'
+import InputDatePassanger from './components/common/InputDatePassanger.vue'
+import Tour from './components/Book/Tour.vue'
 
 export default {
   name: 'App',
   components: {
     Loader,
-    InputCity
+    InputCity,
+    ModalVue,
+    InputDatePassanger,
+    Tour
   },
   setup(){
     const isLoading = ref(true);
+    const store = useStore();
 
     onMounted(() => {
       setTimeout(() => {
@@ -73,8 +87,13 @@ export default {
 
     return{
       isLoading,
-      main_lists
+      main_lists,
+      store
     }
   }
 }
 </script>
+
+<style>
+
+</style>

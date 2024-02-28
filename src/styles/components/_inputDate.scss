@@ -1,0 +1,24 @@
+
+.main-inputs-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $rem-500;
+  margin-top: $rem-500;
+  &.grey{
+    .input-item{
+      background-color: $border-color;
+    }
+  }
+  .input-item{
+    background-color: $white-color;
+    border-radius: $rem-750;
+    display: flex;
+    align-items:center;
+    gap: $rem-500;
+    padding:$rem-750 $rem-1000;
+    p{
+      font-size: $rem-875;
+      margin-bottom: 0;
+    }
+  }
+}

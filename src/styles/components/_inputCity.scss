@@ -20,5 +20,8 @@
         height: $rem-3875;
         font-size: $rem-10625;
         padding: 12px 16px 0;
+        &.grey{
+          background-color: #f3f3f3;
+        }
     }
   }
