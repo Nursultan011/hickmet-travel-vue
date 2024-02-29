@@ -48,12 +48,13 @@
       </div>
     </main>
   </div>
-  <Transition name="tray">
-    <ModalVue v-if="store.state.step == 2">
-      <InputCity />
-    </ModalVue>
-  </Transition>
+    <Transition name="tray">
+      <ModalVue v-if="store.state.step == 2">
+        <InputCity />
+      </ModalVue>
+    </Transition>
     <Tour v-if="store.state.step == 3" />
+    <PassangersModal v-if="store.state.step == 5"/>
 </template>
 
 <script>
@@ -65,6 +66,7 @@ import ModalVue from './components/Modal.vue'
 import { useStore } from 'vuex'
 import InputDatePassanger from './components/common/InputDatePassanger.vue'
 import Tour from './components/Book/Tour.vue'
+import PassangersModal from './components/PassangersModal.vue'
 
 export default {
   name: 'App',
@@ -73,7 +75,8 @@ export default {
     InputCity,
     ModalVue,
     InputDatePassanger,
-    Tour
+    Tour,
+    PassangersModal
   },
   setup(){
     const isLoading = ref(true);

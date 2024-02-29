@@ -22,6 +22,8 @@ export default createStore({
           return 'Подбор тура'
         case 4:
           return 'Доступные даты'
+        case 5:
+          return 'Пассажиры'
       }
     }
   },

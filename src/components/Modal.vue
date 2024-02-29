@@ -1,9 +1,10 @@
 
 <template>
-    <div class="modal-wrapper">
+    <div class="modal-wrapper" :class="{passanger: props.passangers}">
       <div class="container">
+        <div class="modal-overlay"></div>
         <div class="modal-header-line"></div>
-        <ModalHeaderVue />
+        <ModalHeaderVue :passangers="props.passangers"/>
         <slot></slot>
 
       </div>
@@ -13,7 +14,9 @@
 <script setup>
 import { useStore } from 'vuex';
 import ModalHeaderVue from '@/components/common/ModalHeader.vue';
-const store = useStore();
+import { defineProps } from 'vue';
+const props = defineProps(['passangers'])
+
 </script>
 
 <style>

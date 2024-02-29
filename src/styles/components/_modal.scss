@@ -6,6 +6,12 @@
   top: 0;
   left: 0;
   background-color: #fff;
+  &.passanger{
+    top: 70%;
+    bottom: 0;
+    height: auto;
+    z-index: 10;
+  }
 }
 .modal-header-line{
   width: $rem-4000;
@@ -21,7 +27,7 @@
       display: flex;
       align-items: center;
       position: relative;
-      .download-icon{
+      .img-box{
           margin-left: auto;
       }
       .back-box{
