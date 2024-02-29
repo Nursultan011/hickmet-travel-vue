@@ -30,3 +30,22 @@ export const main_lists = [
     description: "Медина - Мекке"
   },
 ]
+
+export const city_list = [
+  {
+    name: 'Алматы',
+    label: 'ALA'
+  },
+  {
+    name: 'Астана',
+    label: 'NQZ'
+  },
+  {
+    name: 'Атырау',
+    label: 'GUW'
+  },
+  {
+    name: 'Ақтау',
+    label: 'SCO'
+  }
+]

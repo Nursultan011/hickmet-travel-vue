@@ -20,6 +20,7 @@
           <p class="white--text text--center">
             Мы помогаем осуществить главную поездку в Вашей жизни с максимальным комфортом.
           </p>
+          <Form />
       </div>
       <div class="main__lists">
           <h2 class="black--text text--center">
@@ -43,6 +44,9 @@
           </ul>
       </div>
     </main>
+    <ChooseCity v-if="$store.state.step == 2"/>
+    <ChooseTour v-if="$store.state.step == 3"/>
+    <ChoosePassangers v-if="$store.state.step == 5"/>
   </div>
 </template>
 
@@ -50,11 +54,20 @@
 import { onMounted, ref } from 'vue'
 import { main_lists } from './content/index.js'
 import Loader from './components/Loader.vue'
+import Form from './components/Form.vue'
+import Modal from './components/Modal.vue'
+import ChooseCity from './components/Modal/ChooseCity.vue'
+import ChooseTour from './components/Modal/ChooseTour.vue'
+import ChoosePassangers from './components/Modal/ChoosePassangers.vue'
 
 export default {
   name: 'App',
   components: {
-    Loader
+    Loader,
+    Form,
+    ChooseCity,
+    ChooseTour,
+    ChoosePassangers
   },
   setup(){
     const isLoading = ref(true);
