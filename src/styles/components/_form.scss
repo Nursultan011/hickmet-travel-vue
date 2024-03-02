@@ -4,6 +4,20 @@
 }
 .form__input-city{
     position: relative;
+    border-radius: $rem-750;
+    width: 100%;
+    height: $rem-3875;
+    background-color: $white-color;
+    &.grey{
+      background-color: #f3f3f3;
+    }
+    p{
+      font-size: $rem-10625;
+      margin: 0;
+      position: absolute;
+      top:$rem-1875;
+      left: $rem-1000;
+    }
     span{
       position: absolute;
       color: $grey-color;
@@ -24,7 +38,7 @@
         width: 100%;
         height: $rem-3875;
         font-size: $rem-10625;
-        padding: 12px 16px 0;
+        padding: $rem-750 $rem-1000 0;
         caret-color: $brand-color;
         &.grey{
           background-color: #f3f3f3;

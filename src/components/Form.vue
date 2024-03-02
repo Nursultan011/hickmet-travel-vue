@@ -1,9 +1,9 @@
 <template>
     <form action="" method="get">
         <div class="form__input-box">
-            <div class="form__input-city" @click="changeStepVal(2)">
+            <div class="form__input-city" @click="changeStepVal(2)" :class="{grey:tour}">
                 <span class="form__label-from">Откуда</span>
-                <input type="text" class="form__input-city" :class="{grey:tour}" v-model="inputCityValue">
+                <p>{{ inputCityValue }}</p>
                 <span class="form__input-label">{{ inputCityLabel }}</span>
             </div>
             <div class="form__inputs-wrapper" :class="{grey:tour}">
