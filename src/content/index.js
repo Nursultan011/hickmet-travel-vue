@@ -49,3 +49,18 @@ export const city_list = [
     label: 'SCO'
   }
 ]
+
+export const hotel_list = [
+  {
+    name: 'Niyet',
+    price: '1650'
+  },
+  {
+    name: 'Hikma',
+    price: '1900'
+  },
+  {
+    name: 'Izi',
+    price: '2100'
+  }
+]
