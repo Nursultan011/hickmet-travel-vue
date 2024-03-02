@@ -24,7 +24,8 @@ export default createStore({
         name: 'Ақтау',
         label: 'SCO'
       }
-    ]
+    ],
+    filteredCities: []
   },
   getters: {
     getCityValue(state){
@@ -40,6 +41,16 @@ export default createStore({
           return 'Доступные даты'
         case 5:
           return 'Пассажиры'
+      }
+    },
+    getCities(state){
+      return state.cities.map(data=>data)
+    },
+    getFilteredArray(state){
+      if(state.filteredCities.length !== 0){
+        return state.filteredCities
+      }else{
+        return state.cities
       }
     }
   },
@@ -69,6 +80,12 @@ export default createStore({
       }else{
         state.childNum -= 1
       }
+    },
+    filterCitites(state,val){
+      state.filteredCities = state.cities.filter(el=>el.name.toLowerCase().includes(val.toLowerCase()))
+    },
+    resetFilteredCities(state,val){
+      state.filteredCities = val
     }
   },
   actions: {

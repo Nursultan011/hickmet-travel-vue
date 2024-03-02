@@ -38,6 +38,11 @@ a{
 	text-decoration: none;
 }
 
+button{
+	border: none;
+	outline: none;
+}
+
 .container {
 	max-width: 480px;
 	width: 100%;
@@ -46,3 +51,30 @@ a{
 	overflow: hidden;
 	padding: 0;
 }
+
+.modal__btn-box{
+	margin-top: auto;
+	padding: $rem-500 $rem-1000;
+	border-top: 1px solid $border-color;
+}
+
+.btn{
+	width: 100%;
+	border-radius: $rem-750;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white-color;
+	cursor: pointer;
+}
+
+.btn-1{
+	background-color: $brand-color;
+	height: $rem-3250;
+}
+
+// @media screen and (max-width: 480px){
+// 	.container{
+// 		padding: 0 $rem-1000;
+// 	}
+// }

@@ -11,6 +11,12 @@
         top: 60%;
         border-radius: $rem-625 $rem-625 0 0;
     }
+    .main__modal-content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // padding: 0 $rem-1000;
+    }
 }
 .main__modal-line{
     width: $rem-4000;
@@ -26,12 +32,13 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
+    cursor: pointer;
 }
 .modal-header-box{
     display: flex;
     align-items: center;
     position: relative;
-    padding: $rem-625 0;
+    padding: $rem-625 $rem-1000;
     border-bottom: 1px solid $border-color;
     margin-bottom: $rem-1500;
     .img-box{
@@ -73,6 +80,8 @@
 }
 
 .modal-passangers-content{
+    margin-bottom: $rem-1500;
+    padding: 0 $rem-1000;
     .passangers-item{
         display: flex;
         justify-content: space-between;
@@ -87,6 +96,9 @@
             gap: $rem-500;
             span{
                 font-size: $rem-10625;
+            }
+            img{
+                cursor: pointer;
             }
         }
     }
