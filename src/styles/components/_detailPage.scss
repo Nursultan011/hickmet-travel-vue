@@ -1,0 +1,176 @@
+
+.detail-page-wrapper{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white-color;
+    z-index: 10;
+    overflow-y: auto;
+    padding-bottom: 146px;
+}
+
+.detail-tab-title{
+    margin-top: $rem-1000;
+    .detail-tab-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $rem-500;
+        padding: 0 $rem-1000;
+        .detail-tab-item{
+            border: 1px solid $border-color;
+            border-radius: $rem-750;
+            padding: $rem-750;
+            display: flex;
+            gap: 8px;
+            .text-box{
+                p{
+                    font-size: $rem-10625;
+                    font-weight: 400;
+                }
+                span{
+                    color: $grey-color;
+                    font-size: $rem-875;
+                    font-weight: 400;
+                    margin-top: $rem-250;
+                }
+            }
+        }
+    }
+}
+
+.detail-slider{
+    margin-top: $rem-2000;
+    &-swiper{
+        padding-left: $rem-1000;
+        margin: $rem-750 0;
+        img{
+            border-radius: $rem-750;
+        }
+    }
+    .detail-slider-title{
+        padding: 0 $rem-1000;
+        h3{
+            margin-bottom: $rem-1000;
+            font-weight: 600;
+        }
+        .slider-tab{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: #7676801F;
+            height: 32px;
+            padding: $rem-125;
+            border-radius: $rem-500;
+            &-item{
+                padding: 0 $rem-500;
+                display: flex;
+                align-items: center;
+                border-radius: $rem-500;
+                box-shadow: 0 3 8px rgba(0, 0, 0, 0.04);
+                &.active{
+                    background-color: $white-color;
+                }
+                p{
+                    font-size: $rem-812;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &-footer{
+        padding: 0 $rem-1000;
+        &-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-size: $rem-875;
+                color: $black-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.detail-about{
+    margin-top: $rem-2000;
+    padding: 0 $rem-1000;
+    &-title{
+        p{
+            font-size: $rem-1250;
+            font-weight: 600;
+        }
+    }
+    &-box{
+        margin-top: $rem-1000;
+    }
+    &-item{
+        display: flex;
+        align-items: flex-start;
+        gap: $rem-750;
+        padding-bottom: $rem-750;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: $rem-750;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .text-box{
+            h3{
+                font-size: $rem-10625;
+                color: $black-color;
+                font-weight: 400;
+                margin-bottom: $rem-500;
+            }
+            p{
+                font-size: $rem-875;
+                color: $grey-color;
+                line-height: $rem-1000;
+            }
+            .img-box{
+                margin-top: $rem-500;
+            }
+        }
+    }
+}
+
+.detail-feedback{
+    margin-top: $rem-2000;
+    padding: 0 $rem-1000;
+    &-title{
+        p{
+            font-size: $rem-1250;
+            font-weight: 600;
+        }
+    }
+    &-box{
+        margin: $rem-1000 0;
+        display: grid;
+        gap: $rem-750;
+    }
+    &-item{
+        border: 1px solid $border-color;
+        border-radius: $rem-750;
+        padding: $rem-750;
+        .item-title{
+            display: flex;
+            align-items: center;
+            gap: $rem-500;
+            margin-bottom: $rem-500;
+            p{
+                color: $black-color;
+                font-size: $rem-875;
+            }
+            span{
+                display: block;
+                font-size: $rem-812;
+                color: $grey-color;
+            }
+        }
+        p{
+            color: $black-color;
+            font-size: $rem-812;
+            line-height: 15px;
+        }
+    }
+}

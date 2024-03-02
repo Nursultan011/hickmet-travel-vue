@@ -47,6 +47,7 @@
     <ChooseCity v-if="$store.state.step == 2"/>
     <ChooseTour v-if="$store.state.step == 3"/>
     <ChoosePassangers v-if="$store.state.step == 5"/>
+    <DetailPage v-if="$store.state.step == 6"/>
   </div>
 </template>
 
@@ -59,6 +60,7 @@ import Modal from './components/Modal.vue'
 import ChooseCity from './components/Modal/ChooseCity.vue'
 import ChooseTour from './components/Modal/ChooseTour.vue'
 import ChoosePassangers from './components/Modal/ChoosePassangers.vue'
+import DetailPage from './components/Book/DetailPage.vue'
 
 export default {
   name: 'App',
@@ -67,7 +69,8 @@ export default {
     Form,
     ChooseCity,
     ChooseTour,
-    ChoosePassangers
+    ChoosePassangers,
+    DetailPage
   },
   setup(){
     const isLoading = ref(true);

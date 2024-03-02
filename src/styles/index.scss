@@ -5,6 +5,7 @@
 @import "./components/_form.scss";
 @import "./components/_modal.scss";
 @import "./components/_tour.scss";
+@import "./components/_detailPage.scss";
 
 * {
 	outline: none !important;
@@ -42,6 +43,7 @@ a{
 button{
 	border: none;
 	outline: none;
+	cursor: pointer;
 }
 
 img{
@@ -58,9 +60,15 @@ img{
 }
 
 .modal__btn-box{
-	margin-top: auto;
 	padding: $rem-500 $rem-1000;
 	border-top: 1px solid $border-color;
+}
+
+.bottom-btn-box{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: $white-color;
 }
 
 .btn{
@@ -71,6 +79,8 @@ img{
 	align-items: center;
 	color: $white-color;
 	cursor: pointer;
+	font-size: $rem-10625;
+	font-weight: 500;
 }
 
 .btn-1{
@@ -81,4 +91,11 @@ img{
 .btn-2{
 	background-color: $sec-black-color;
 	height: $rem-3000;
+}
+
+.btn-3{
+	background-color: $white-color;
+	height: $rem-3000;
+	color: $black-color;
+	border: 1px solid $black-color;
 }

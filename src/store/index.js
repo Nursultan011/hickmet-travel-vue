@@ -7,6 +7,7 @@ export default createStore({
     step: 1,
     adultsNum: 0,
     childNum: 0,
+    detailTourName: '',
     cities:[
       {
         name: 'Алматы',
@@ -41,17 +42,12 @@ export default createStore({
           return 'Доступные даты'
         case 5:
           return 'Пассажиры'
+        case 7:
+          return 'Бронирование'
       }
     },
     getCities(state){
       return state.cities.map(data=>data)
-    },
-    getFilteredArray(state){
-      if(state.filteredCities.length !== 0){
-        return state.filteredCities
-      }else{
-        return state.cities
-      }
     }
   },
   mutations: {
@@ -86,6 +82,9 @@ export default createStore({
     },
     resetFilteredCities(state,val){
       state.filteredCities = val
+    },
+    changeTourName(state,val){
+      state.detailTourName = val
     }
   },
   actions: {

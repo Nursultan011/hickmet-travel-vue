@@ -38,7 +38,6 @@ export default{
     setup(){
         const store = useStore();
         const cityValue = ref('')
-        const {getFilteredArray} = store.getters;
 
         console.log(store.getters.getCities)
 
@@ -59,13 +58,13 @@ export default{
 
         onMounted(() => {
             handleCityVal(store.state.cityValue)
-            store.commit('resetFilteredCities',[])
+            store.commit('resetFilteredCities', store.state.cities)
         })
 
         return {
             inputCityValue: computed(() => store.state.cityValue),
             inputCityLabel: computed(() => store.state.cityValueLabel),
-            cities: computed(() => store.getters.getFilteredArray),
+            cities: computed(() => store.state.filteredCities),
             cityValue,
             changeCityVal,
             handleChange

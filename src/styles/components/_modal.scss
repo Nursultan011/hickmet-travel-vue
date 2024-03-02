@@ -7,16 +7,10 @@
     right: 0;
     background-color: $white-color;
     z-index: 10;
-    overflow: auto;
+    overflow-y: auto;
     &.modal-passangers{
         top: auto;
         border-radius: $rem-625 $rem-625 0 0;
-    }
-    .main__modal-content{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        // padding: 0 $rem-1000;
     }
 }
 .main__modal-line{
@@ -69,7 +63,7 @@
         h1{
             color: $black-color;
             font-size: $rem-10625;
-            font-weight: 500;
+            font-weight: 600;
         }
     }
 }
