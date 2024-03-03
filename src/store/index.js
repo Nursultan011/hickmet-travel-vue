@@ -4,11 +4,11 @@ export default createStore({
   state:{
     cityValue: "Алматы",
     cityValueLabel: "ALA",
-    step: 7,
+    step: 1,
     adultsNum: 0,
     childNum: 0,
     detailTourName: '',
-    bookStep: 1,
+    bookStep: 0,
     cities:[
       {
         name: 'Алматы',
@@ -31,9 +31,10 @@ export default createStore({
     tourPrice: 0,
     dollarCurrency: 0,
     foodPrice: 200,
-    visaCheckBox: false,
+    visaCheckBox: true,
     foodCheckBox: false,
-    passangerModal: false
+    passangerModal: false,
+    startTimer: false
   },
   getters: {
     getCityValue(state){
@@ -115,6 +116,9 @@ export default createStore({
     },
     changeBookStep(state,val){
       state.bookStep = val
+    },
+    changeStartTimer(state,val){
+      state.startTimer = val
     }
   },
   actions: {

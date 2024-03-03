@@ -52,12 +52,21 @@
         display: flex;
         align-items: center;
         gap: 13px;
+        &.hide{
+            display: none;
+        }
         &.modal-passangers{
             opacity: 0;
         }
         p{
             font-size: $rem-10625;
             color: $blue-color;
+        }
+        &.back-book-box{
+            display: none;
+            &.show{
+                display: flex;
+            }
         }
     }
     .modal-header-text{

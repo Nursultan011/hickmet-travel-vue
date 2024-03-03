@@ -1,4 +1,10 @@
 
+.book-wrapper{
+    &.hasPadding{
+        padding-bottom: 160px;
+    }
+}
+
 .book-progressbar{
     padding: 0 $rem-1000;
     .progress-title{
@@ -24,6 +30,14 @@
             }
             .progress-line-percent{
                 width: 50%;
+            }
+        }
+        &.step3{
+            img{
+                left: 80%;
+            }
+            .progress-line-percent{
+                width: 85%;
             }
         }
         img{
@@ -115,10 +129,33 @@
     width: 100%;
     bottom: 0;
     border-top: 1px solid $border-color;
+    z-index: 200;
+    background-color: $white-color;
+    .book-bottom-btn{
+        &.blackBtn{
+            background-color: $sec-black-color;
+        }
+        &.redBtn{
+            background-color: $red-color;
+            display: none;
+        }
+    }
+    .book-bottom-btn-2{
+        display: none;
+        &.redBtn{
+            background-color: $red-color;
+        }
+        &.show{
+            display: flex;
+        }
+    }
     .book-result-price{
         display: flex;
         justify-content: space-between;
         margin-bottom: $rem-750;
+        &.hide{
+            display: none;
+        }
         p{
             font-size: $rem-10625;
             font-weight: 400;
@@ -134,6 +171,65 @@
                 font-weight: 400;
                 color: $grey-color;
                 margin-top: $rem-250;
+            }
+        }
+    }
+}
+
+.cleint__data-box{
+    padding: 0 $rem-1000;
+    .client__data-title{
+        p{
+            font-size: $rem-1250;
+            font-weight: 600;
+            margin-bottom: $rem-500;
+        }
+        span{
+            color: $grey-color;
+            font-size: $rem-875;
+            font-weight: 400;
+        }
+    }
+    .timer-box{
+        margin-top: $rem-750;
+        p{
+            font-size: $rem-10625;
+            font-weight: 400;
+        }
+    }
+    form{
+        margin: $rem-1000 0 $rem-1500;
+        .form-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: $rem-1500;
+            .client-form-items{
+                .input-box{
+                    width: 100%;
+                    margin-bottom: $rem-750;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    label{
+                        display: block;
+                        color: $grey-color;
+                        font-size: $rem-875;
+                        font-weight: 400;
+                        margin-bottom: $rem-500;
+                    }
+                    input{
+                        width: 100%;
+                        border: 1px solid $border-color;
+                        padding: $rem-750 $rem-1000;
+                        border-radius: $rem-750;
+                        font-size: $rem-10625;
+                        font-weight: 400;
+                        color: $sec-black-color;
+                        &::placeholder{
+                            color: #DFDFDF;
+                        }
+                    }
+                }
             }
         }
     }

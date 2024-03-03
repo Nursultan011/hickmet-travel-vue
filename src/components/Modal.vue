@@ -3,7 +3,11 @@
     <div class="container">
         <div class="main__modal-line"></div>
         <div class="modal-header-box">
-            <div class="back-box" @click="changeStepVal">
+            <div class="back-box" @click="changeStepVal" :class="{hide: $store.state.bookStep > 0}">
+                <img src="../assets/images/left-arrow.svg" alt="left-arrow">
+                <p>Назад</p>
+            </div>
+            <div class="back-box back-book-box" :class="{show: $store.state.bookStep > 0}">
                 <img src="../assets/images/left-arrow.svg" alt="left-arrow">
                 <p>Назад</p>
             </div>

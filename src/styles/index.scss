@@ -7,6 +7,7 @@
 @import "./components/_tour.scss";
 @import "./components/_detailPage.scss";
 @import "./components/_bookPage.scss";
+@import "./components/_enterNumber.scss";
 
 * {
 	outline: none !important;
@@ -99,4 +100,35 @@ img{
 	height: $rem-3000;
 	color: $black-color;
 	border: 1px solid $black-color;
+}
+
+.input-box{
+	width: 100%;
+	margin-bottom: $rem-750;
+	&.number-input-box{
+		margin-top: $rem-1500;
+		text-align: left;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	label{
+		display: block;
+		color: $grey-color;
+		font-size: $rem-875;
+		font-weight: 400;
+		margin-bottom: $rem-500;
+	}
+	input{
+		width: 100%;
+		border: 1px solid $border-color;
+		padding: $rem-750 $rem-1000;
+		border-radius: $rem-750;
+		font-size: $rem-10625;
+		font-weight: 400;
+		color: $sec-black-color;
+		&::placeholder{
+			color: #DFDFDF;
+		}
+	}
 }

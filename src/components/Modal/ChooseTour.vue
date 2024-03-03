@@ -8,6 +8,7 @@
                         :slides-per-view="1"
                         :pagination="{ clickable: true }"
                         :modules="[Pagination]"
+                        :space-between="8"
                     >
                         <swiper-slide><img src="@/assets/images/1.jpeg" alt=""></swiper-slide>
                         <swiper-slide><img src="@/assets/images/2.jpeg" alt=""></swiper-slide>
