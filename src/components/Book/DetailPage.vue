@@ -175,7 +175,7 @@
            
                
                <div class="modal__btn-box bottom-btn-box">
-                   <button class="btn btn-2">Забронировать</button>
+                   <button class="btn btn-2" @click="changeStepVal(7)">Забронировать</button>
                </div>
            </div>
        </div>

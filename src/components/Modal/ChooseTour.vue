@@ -2,7 +2,7 @@
     <Modal>
         <Form :tour="true"/>
         <div class="tour__content" v-if="$store.state.adultsNum > 0 || $store.state.childNum > 0">
-            <div class="tour__content-item" v-for="(item, id) in hotel_list" :key="id" @click="goDetail(item.name)">
+            <div class="tour__content-item" v-for="(item, id) in hotel_list" :key="id" @click="goDetail(item.name, item.price)">
                 <div class="tour__content-item__img">
                     <swiper
                         :slides-per-view="1"
@@ -54,10 +54,10 @@ export default{
     },
     setup(){
         const store = useStore();
-        const goDetail = (val)=>{
-            console.log(val)
+        const goDetail = (name,price)=>{
             store.commit('changeStep', 6)
-            store.commit('changeTourName', val)
+            store.commit('changeTourName', name)
+            store.commit('handleTourPrice',price)
         }
         return{
             Pagination,

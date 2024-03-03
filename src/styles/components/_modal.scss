@@ -1,4 +1,7 @@
 
+.modal-passangers{
+    z-index: 100;
+}
 .main__modal{
     position: fixed;
     top: 0;
@@ -11,6 +14,7 @@
     &.modal-passangers{
         top: auto;
         border-radius: $rem-625 $rem-625 0 0;
+        z-index: 100;
     }
 }
 .main__modal-line{
@@ -26,7 +30,7 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2;
+    z-index: 100;
     cursor: pointer;
 }
 .modal-header-box{

@@ -4,10 +4,11 @@ export default createStore({
   state:{
     cityValue: "Алматы",
     cityValueLabel: "ALA",
-    step: 1,
+    step: 7,
     adultsNum: 0,
     childNum: 0,
     detailTourName: '',
+    bookStep: 1,
     cities:[
       {
         name: 'Алматы',
@@ -26,7 +27,13 @@ export default createStore({
         label: 'SCO'
       }
     ],
-    filteredCities: []
+    filteredCities: [],
+    tourPrice: 0,
+    dollarCurrency: 0,
+    foodPrice: 200,
+    visaCheckBox: false,
+    foodCheckBox: false,
+    passangerModal: false
   },
   getters: {
     getCityValue(state){
@@ -48,6 +55,14 @@ export default createStore({
     },
     getCities(state){
       return state.cities.map(data=>data)
+    },
+    changePriceToTenge(state){
+      if(state.foodCheckBox) return ((parseInt(state.tourPrice) + parseInt(state.foodPrice)) * 450) * parseInt(state.adultsNum)
+      return (parseInt(state.tourPrice) * 450) * parseInt(state.adultsNum)
+    },
+    getTotalPrice(state){
+      if(state.foodCheckBox) return (parseInt(state.tourPrice) * parseInt(state.adultsNum)) + parseInt(state.foodPrice)
+      return (parseInt(state.tourPrice) * parseInt(state.adultsNum))
     }
   },
   mutations: {
@@ -85,6 +100,21 @@ export default createStore({
     },
     changeTourName(state,val){
       state.detailTourName = val
+    },
+    handleVisa(state, val){
+      state.visaCheckBox = val
+    },
+    handleFood(state,val){
+      state.foodCheckBox = val
+    },
+    handlePassangerModal(state,val){
+      state.passangerModal = val
+    },
+    handleTourPrice(state,val){
+      state.tourPrice = val
+    },
+    changeBookStep(state,val){
+      state.bookStep = val
     }
   },
   actions: {

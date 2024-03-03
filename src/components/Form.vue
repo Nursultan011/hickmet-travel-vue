@@ -11,7 +11,7 @@
                     <img src="@/assets/images/date.svg" alt="" >
                     <p>Вылет - Обратно</p>
                 </div>
-                <div class="input-item" @click="changeStepVal(5)">
+                <div class="input-item" @click="handlePassangerModal(!$store.state.passangerModal)">
                     <img src="@/assets/images/passangers.svg" alt="">
                     <p v-if="adultNum > 0 && childNum > 0">{{ adultNum }} Взрослый, {{ childNum }} Дети</p>
                     <p v-else-if="adultNum > 0">{{ adultNum }} Взрослый</p>
@@ -37,12 +37,16 @@ export default{
         const changeStepVal = (val) => {
             store.commit('changeStep', val)
         }
+        const handlePassangerModal = (val) =>{
+            store.commit('handlePassangerModal', val)
+        }
         return{
             inputCityValue: computed(() => store.state.cityValue),
             inputCityLabel: computed(() => store.state.cityValueLabel),
             changeStepVal,
             adultNum:computed(() => store.state.adultsNum),
             childNum:computed(() => store.state.childNum),
+            handlePassangerModal
         }
     }
 }
