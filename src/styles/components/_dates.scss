@@ -19,6 +19,16 @@
     }
 }
 
+.dates-btn{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10000000;
+}
+.vc-title span{
+    font-size: $rem-10625;
+    font-weight: 600;
+}
 .vc-container{
     width: 100% !important;
     border: none !important;
@@ -35,7 +45,7 @@
 }
 .vc-title-wrapper button{
     background-color: #fff !important;
-    margin-bottom: $rem-500;
+    margin-bottom: $rem-1250;
 }
 // .vc-attr.vc-blue{
 //     background-color: $border-color !important;   

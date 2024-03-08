@@ -1,7 +1,25 @@
 
 <template>
-<Modal>
-    <section class="detail-slider">
+<div class="main__modal">
+    <div class="container">
+        <div class="main__modal-line"></div>
+        <div class="modal-header-box">
+            <div class="back-box" @click="$store.commit('handleDateModal', false)" >
+                <img src="@/assets/images/left-arrow.svg" alt="left-arrow">
+                <p>Назад</p>
+            </div>
+            <div class="back-box back-book-box">
+                <img src="@/assets/images/left-arrow.svg" alt="left-arrow">
+                <p>Назад</p>
+            </div>
+            <div class="modal-header-text">
+                <h1>{{ getModalTitle }}</h1>
+            </div>
+            <div class="img-box" @click="$store.commit('handleDateModal', false)">
+                <img class="close-icon" src="@/assets/images/Close.svg" alt="">
+            </div>
+        </div>
+        <section class="detail-slider">
         <div class="detail-slider-title">
             <div class="slider-tab">
                 <div class="slider-tab-item active">
@@ -13,6 +31,10 @@
             </div>
         </div>
     </section>
+
+    <div class="modal__btn-box dates-btn">
+                   <button class="btn btn-1" @click="$store.commit('handleDateModal', false)">Выбрать</button>
+               </div>
 
     <div class="dates-wrapper">
         <div class="days-box">
@@ -29,11 +51,8 @@
             v-model.range="range"
         />
     </div>
-    
-    
-</Modal>
-<div class="modal__btn-box bottom-btn-box">
-    <button class="btn btn-2" @click="changeStepVal(7)">Забронировать</button>
+
+</div>
 </div>
 </template>
 
