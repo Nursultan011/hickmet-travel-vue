@@ -66,8 +66,10 @@
                 padding: 0 $rem-500;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 border-radius: $rem-500;
                 box-shadow: 0 3 8px rgba(0, 0, 0, 0.04);
+                text-align: center;
                 &.active{
                     background-color: $white-color;
                 }

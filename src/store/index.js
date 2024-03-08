@@ -4,7 +4,7 @@ export default createStore({
   state:{
     cityValue: "Алматы",
     cityValueLabel: "ALA",
-    step: 1,
+    step: 4,
     adultsNum: 0,
     childNum: 0,
     detailTourName: '',

@@ -1,0 +1,72 @@
+
+.dates-wrapper{
+    padding: 0 $rem-1000;
+}
+
+.days-box{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    text-align: center;
+    margin-top: $rem-750;
+    margin-bottom: $rem-1500;
+    .days-item{
+        padding: $rem-750;
+        p{
+            color: $grey-color;
+            font-size: $rem-10625;
+            font-weight: 400;
+        }
+    }
+}
+
+.vc-container{
+    width: 100% !important;
+    border: none !important;
+}
+
+.vc-arrow{
+    display: none !important;
+}
+.vc-weekdays{
+    display: none !important;
+}
+
+.vc-title-wrapper button{
+    background-color: #fff !important;
+    margin-bottom: $rem-500;
+}
+
+.vc-weeks{
+    padding: 0 !important;
+}
+
+.vc-header{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.vc-highlight-content-solid.vc-blue,.vc-highlight-content-outline.vc-blue{
+    background-color: $black-color !important;
+    color: #fff !important;
+    border-radius: $rem-750 !important;
+    width: 52px !important;
+    height: 44px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.vc-day-content{
+    font-size: $rem-10625 !important;
+    font-weight: 400 !important;
+    color: #CDCDCD !important;
+}
+.vc-highlight.vc-highlight-base-middle.vc-highlight-bg-light{
+    background-color: $border-color !important;
+}
+.vc-highlight-content-light.vc-blue{
+    color: $black-color !important;
+    background-color: $border-color !important;
+}
+.vc-week{
+    margin-bottom: 12px;
+}
