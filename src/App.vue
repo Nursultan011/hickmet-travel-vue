@@ -46,7 +46,7 @@
     </main>
     <ChooseCity v-if="$store.state.step == 2"/>
     <ChooseTour v-if="$store.state.step == 3"/>
-    <Dates v-if="$store.state.step == 4"/>
+    <Dates v-if="$store.state.dateModal"/>
     <ChoosePassangers v-if="$store.state.passangerModal"/>
     <DetailPage v-if="$store.state.step == 6"/>
     <BookPage v-if="$store.state.step == 7"/>

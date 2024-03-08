@@ -30,12 +30,16 @@
 .vc-weekdays{
     display: none !important;
 }
-
+.vc-day{
+    width: 100% !important;
+}
 .vc-title-wrapper button{
     background-color: #fff !important;
     margin-bottom: $rem-500;
 }
-
+// .vc-attr.vc-blue{
+//     background-color: $border-color !important;   
+// }
 .vc-weeks{
     padding: 0 !important;
 }
@@ -44,7 +48,9 @@
     margin: 0 !important;
     padding: 0 !important;
 }
-
+.vc-highlight-bg-light{
+    background-color: $border-color !important; 
+}
 .vc-highlight-content-solid.vc-blue,.vc-highlight-content-outline.vc-blue{
     background-color: $black-color !important;
     color: #fff !important;
@@ -60,7 +66,7 @@
     font-weight: 400 !important;
     color: #CDCDCD !important;
 }
-.vc-highlight.vc-highlight-base-middle.vc-highlight-bg-light{
+.vc-highlight-base-middle.vc-highlight-bg-light{
     background-color: $border-color !important;
 }
 .vc-highlight-content-light.vc-blue{

@@ -34,7 +34,10 @@ export default createStore({
     visaCheckBox: true,
     foodCheckBox: false,
     passangerModal: false,
-    startTimer: false
+    startTimer: false,
+    startDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
+    endDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+7),
+    dateModal: false
   },
   getters: {
     getCityValue(state){
@@ -119,6 +122,9 @@ export default createStore({
     },
     changeStartTimer(state,val){
       state.startTimer = val
+    },
+    handleDateModal(state,val){
+      state.dateModal = val
     }
   },
   actions: {

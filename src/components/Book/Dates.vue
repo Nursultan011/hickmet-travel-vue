@@ -29,8 +29,12 @@
             v-model.range="range"
         />
     </div>
-
+    
+    
 </Modal>
+<div class="modal__btn-box bottom-btn-box">
+    <button class="btn btn-2" @click="changeStepVal(7)">Забронировать</button>
+</div>
 </template>
 
 <script>
@@ -87,7 +91,7 @@ import { setupCalendar, Calendar, DatePicker } from 'v-calendar';
 //     },
 // ]
 import {ref} from 'vue'
-
+import { useStore } from 'vuex';
 
 
 export default{
@@ -99,6 +103,8 @@ export default{
     },
     setup(){
         const days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+        const store = useStore()
+        const {startDate, endDate} = store
         const range = ref({
             start: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
             end: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+7),

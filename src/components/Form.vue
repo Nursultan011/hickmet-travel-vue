@@ -7,7 +7,7 @@
                 <span class="form__input-label">{{ inputCityLabel }}</span>
             </div>
             <div class="form__inputs-wrapper" :class="{grey:tour}">
-                <div class="input-item">
+                <div class="input-item" @click="()=>{$store.commit('handleDateModal',true)}">
                     <img src="@/assets/images/date.svg" alt="" >
                     <p>Вылет - Обратно</p>
                 </div>
