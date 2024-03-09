@@ -7,9 +7,17 @@
                 <span class="form__input-label">{{ inputCityLabel }}</span>
             </div>
             <div class="form__inputs-wrapper" :class="{grey:tour}">
-                <div class="input-item" @click="()=>{$store.commit('handleDateModal',true)}">
+                <div class="input-item" @click="handleDateModal">
                     <img src="@/assets/images/date.svg" alt="" >
-                    <p>Вылет - Обратно</p>
+                    <p v-if="startDate && endDate">
+                        {{ startDate.toLocaleString(locale, { month: "long", }) }}
+                        {{ startDate.getDate() }}
+                        {{ startDate.toLocaleString(locale, { weekday: "long", }) }} - 
+                        {{ endDate.toLocaleString(locale, { month: "long", }) }}
+                        {{ endDate.getDate() }}
+                        {{ endDate.toLocaleString(locale, { weekday: "long", }) }}
+                    </p>
+                    <p v-else>Вылет - Обратно</p>
                 </div>
                 <div class="input-item" @click="handlePassangerModal(!$store.state.passangerModal)">
                     <img src="@/assets/images/passangers.svg" alt="">
@@ -40,13 +48,19 @@ export default{
         const handlePassangerModal = (val) =>{
             store.commit('handlePassangerModal', val)
         }
+        const handleDateModal = () => {
+            store.commit('handleDateModal',true)
+        }
         return{
             inputCityValue: computed(() => store.state.cityValue),
             inputCityLabel: computed(() => store.state.cityValueLabel),
+            startDate: computed(() => store.state.startDate),
+            endDate: computed(() => store.state.endDate),
             changeStepVal,
             adultNum:computed(() => store.state.adultsNum),
             childNum:computed(() => store.state.childNum),
-            handlePassangerModal
+            handlePassangerModal,
+            handleDateModal
         }
     }
 }

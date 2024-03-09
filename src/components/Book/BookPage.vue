@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="input-box">
                                     <label for="">Номер телефона</label>
-                                    <input type="text" placeholder="">
+                                    <input v-mask="'#(###)###-##-##'" type="text" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -80,8 +80,8 @@
             <div class="book-result-price" :class="{hide:$store.state.bookStep == 2 }">
                 <p>Итого</p>
                 <div class="price-box">
-                    <p>{{tourPrice}}₸</p>
-                    <span>{{$store.getters.getTotalPrice}}$</span>
+                    <p>{{numberWithSpaces(tourPrice)}}₸</p>
+                    <span>{{numberWithSpaces($store.getters.getTotalPrice)}}$</span>
                 </div>
             </div>
             <button class="btn btn-1 book-bottom-btn" :class="{blackBtn:$store.state.bookStep == 1, redBtn: $store.state.bookStep == 2}" >{{$store.state.bookStep == 2 ? "Отправить счет на Kaspi.kz" : "Продолжить"}}</button>
@@ -159,6 +159,10 @@ export default{
             }
         })
 
+        function numberWithSpaces(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        }
+
         return{
             tourPrice: computed(() => store.getters.changePriceToTenge),
             Navigation,
@@ -167,7 +171,8 @@ export default{
             minute,
             second,
             showLoader,
-            handleBtn
+            handleBtn,
+            numberWithSpaces
         }
     }
 }

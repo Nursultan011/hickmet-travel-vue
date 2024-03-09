@@ -1,6 +1,8 @@
 
 <template>
 <div class="main__modal">
+    <div class="container">
+        <div class="enternumber__content">
     <div class="enter__number-wrapper">
         <header class="header">
             <div class="language">
@@ -40,7 +42,9 @@
     </div>
     <div class="modal__btn-box bottom-btn-box enter-number-btns" v-if="numberStep == 1">
         <button class="btn btn-3" @click="handleStep(2)">Нет</button>
-        <button class="btn btn-2">Да</button>
+        <button class="btn btn-2" @click="handleStep(3)">Да</button>
+    </div>
+</div>
     </div>
 </div>
 </template>

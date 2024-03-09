@@ -131,6 +131,7 @@
     border-top: 1px solid $border-color;
     z-index: 200;
     background-color: $white-color;
+    max-width: 480px;
     .book-bottom-btn{
         &.blackBtn{
             background-color: $sec-black-color;

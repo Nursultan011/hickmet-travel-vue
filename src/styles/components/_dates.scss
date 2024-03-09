@@ -24,6 +24,7 @@
     width: 100%;
     bottom: 0;
     z-index: 10000000;
+    max-width: 480px;
 }
 .vc-title span{
     font-size: $rem-10625;

@@ -40,10 +40,10 @@
                    <div class="detail-slider-title">
                        <h3 class="detail-section-title">Отели</h3>
                        <div class="slider-tab">
-                           <div class="slider-tab-item active">
+                           <div class="slider-tab-item" :class="{active: chooseMekka}" @click="()=>{chooseMekka = true}">
                                <p>Swissotel Makkah - Меке</p>
                            </div>
-                           <div class="slider-tab-item">
+                           <div class="slider-tab-item" :class="{active: !chooseMekka}" @click="()=>{chooseMekka = false}">
                                <p>Jayden Hotel - Медина</p>
                            </div>
                        </div>
@@ -186,7 +186,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import { computed } from 'vue'
+import { computed,ref } from 'vue'
 import { useStore } from 'vuex';
 
 export default{
@@ -200,9 +200,11 @@ export default{
         const changeStepVal = (val) => {
             store.commit('changeStep', val)
         }
+        const chooseMekka = ref(true)
         return{
             tourName: computed(() => store.state.detailTourName),
-            changeStepVal
+            changeStepVal,
+            chooseMekka
         }
     }
 }

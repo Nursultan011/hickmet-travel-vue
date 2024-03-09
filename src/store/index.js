@@ -35,8 +35,8 @@ export default createStore({
     foodCheckBox: false,
     passangerModal: false,
     startTimer: false,
-    startDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
-    endDate: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()+7),
+    startDate: null,
+    endDate: null,
     dateModal: false
   },
   getters: {
@@ -61,12 +61,12 @@ export default createStore({
       return state.cities.map(data=>data)
     },
     changePriceToTenge(state){
-      if(state.foodCheckBox) return ((parseInt(state.tourPrice) + parseInt(state.foodPrice)) * 450) * parseInt(state.adultsNum)
-      return (parseInt(state.tourPrice) * 450) * parseInt(state.adultsNum)
+      if(state.foodCheckBox) return ((parseInt(state.tourPrice) + parseInt(state.foodPrice)) * 450) * (parseInt(state.adultsNum) + parseInt(state.childNum))
+      return (parseInt(state.tourPrice) * 450) * (parseInt(state.adultsNum) + parseInt(state.childNum))
     },
     getTotalPrice(state){
-      if(state.foodCheckBox) return (parseInt(state.tourPrice) * parseInt(state.adultsNum)) + parseInt(state.foodPrice)
-      return (parseInt(state.tourPrice) * parseInt(state.adultsNum))
+      if(state.foodCheckBox) return (parseInt(state.tourPrice) * (parseInt(state.adultsNum) + parseInt(state.childNum))) + parseInt(state.foodPrice)
+      return (parseInt(state.tourPrice) * (parseInt(state.adultsNum) + parseInt(state.childNum)))
     }
   },
   mutations: {
@@ -125,6 +125,12 @@ export default createStore({
     },
     handleDateModal(state,val){
       state.dateModal = val
+    },
+    handleStartDate(state,val){
+      state.startDate = val
+    },
+    handleEndDate(state,val){
+      state.endDate = val
     }
   },
   actions: {
